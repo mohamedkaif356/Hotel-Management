@@ -15,7 +15,7 @@ This app is the ideal solution to manage your hotel booking
 ## Libraries
 
 * [Dagger Hilt](https://dagger.dev/hilt/)
-* [Firebase] (https://firebase.google.com/docs/android/setup)
+* [Firebase](https://firebase.google.com/docs/android/setup)
 * [Coroutines](https://github.com/Kotlin/kotlinx.coroutines)
 * [Glide](https://github.com/bumptech/glide)
 * [Retrofit 2](https://github.com/square/retrofit)
