@@ -5,7 +5,7 @@ This app is the ideal solution to manage your hotel booking
 
 # Admin side
 * See the recent books of the particular room
-* Change the past booking of a particular room
+* See the past booking of a particular room
 
 # Client side
 * Login feature
