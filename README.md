@@ -3,11 +3,11 @@ This app is the ideal solution to manage your hotel booking
 
 ## Features
 
-#Admin side
+# Admin side
 * See the recent books of the particular room
 * Change the past booking of a particular room
 
-#Client side
+# Client side
 * Login feature
 * Add a new booking with costumers all required details
 * Delete booking within 24 hours
