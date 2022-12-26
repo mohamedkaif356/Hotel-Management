@@ -93,7 +93,7 @@ class EntryFragment : Fragment() {
                     hideProgressBar()
                     hideErrorMessage()
                     response.data?.let { entryResponse ->
-                        if (!entryResponse.data.isNullOrEmpty()){
+                        if (entryResponse.data.isNotEmpty()){
                             binding.entryCL.visibility = View.VISIBLE
                             binding.villaEntrySV.visibility = View.GONE
                             entryAdapter.differ.submitList(entryResponse.data)
