@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    tools:context=".ui.fragments.AddEntryFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardElevation="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/nunito_extra_bold"
+                android:gravity="center"
+                android:text="@string/details"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:id="@+id/addEntrySV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name_textInput"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:hint="@string/customer_name"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/lightGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/number_textInput"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:hint="@string/customer_phone_number"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/lightGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_textInput">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_textInput"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:hint="@string/customer_email"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/lightGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/number_textInput">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/check_in_date_textInput"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:focusableInTouchMode="false"
+                android:hint="@string/check_in"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/lightGrey"
+                app:layout_constraintEnd_toStartOf="@+id/check_out_date_textInput"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_textInput">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/checkInDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="true"
+                    android:focusable="false"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/check_out_date_textInput"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:focusableInTouchMode="false"
+                android:hint="@string/check_out"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/lightGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/check_in_date_textInput"
+                app:layout_constraintTop_toBottomOf="@+id/email_textInput">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/checkOutDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/amount_textInput"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:hint="@string/amount"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/lightGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check_out_date_textInput">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/payment_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                app:layout_constraintEnd_toStartOf="@id/guest_spinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/amount_textInput" />
+
+            <Spinner
+                android:id="@+id/guest_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/payment_spinner"
+                app:layout_constraintTop_toBottomOf="@+id/amount_textInput" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/breakFast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/breakfast"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/payment_spinner" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/lunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/lunch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/payment_spinner" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/dinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/dinner"
+                app:layout_constraintEnd_toStartOf="@+id/lunch"
+                app:layout_constraintStart_toEndOf="@+id/breakFast"
+                app:layout_constraintTop_toBottomOf="@+id/payment_spinner" />
+
+            <ImageButton
+                android:id="@+id/camearImage"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_margin="25dp"
+                android:background="@drawable/btn_background"
+                android:fontFamily="@font/nunito_extra_bold"
+                android:src="@drawable/ic_camear"
+                android:text="@string/add_entry"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/galleryImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dinner" />
+
+            <ImageButton
+                android:id="@+id/galleryImage"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_margin="25dp"
+                android:background="@drawable/btn_background"
+                android:fontFamily="@font/nunito_extra_bold"
+                android:src="@drawable/ic_add_photo"
+                android:text="@string/add_entry"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/camearImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dinner" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/imageViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/camearImage"
+                tools:layout_editor_absoluteX="25dp" />
+
+            <ProgressBar
+                android:id="@+id/progressBarImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminateDrawable="@drawable/progressbar_costume_view"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewPager"
+                app:layout_constraintTop_toTopOf="@id/imageViewPager" />
+
+            <TextView
+                android:id="@+id/noDocumentTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_extra_bold"
+                android:gravity="center"
+                android:text="@string/document_images_are_empty_please_add_it_before_creating_a_entry"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewPager"
+                app:layout_constraintTop_toTopOf="@id/imageViewPager"
+                tools:layout_editor_absoluteX="10dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addEntry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:background="@drawable/btn_background"
+                android:fontFamily="@font/nunito_extra_bold"
+                android:text="@string/add_entry"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewPager" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/errorMessageCL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <include
+                    android:id="@+id/itemErrorMessage"
+                    layout="@layout/item_error_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/progressBarCL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/progressbar_costume_view"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/entryAddedCL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF000000"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_extra_bold"
+            android:gravity="center"
+            android:text="@string/entry_added_successfully"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/circleIv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/circleIv"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:background="@drawable/primary_circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/done"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="50dp"
+            android:src="@drawable/entry_added"
+            app:layout_constraintBottom_toBottomOf="@id/circleIv"
+            app:layout_constraintEnd_toEndOf="@id/circleIv"
+            app:layout_constraintStart_toStartOf="@id/circleIv"
+            app:layout_constraintTop_toTopOf="@id/circleIv" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:background="@drawable/btn_background"
+            android:fontFamily="@font/nunito_extra_bold"
+            android:text="@string/go_back"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/circleIv"
+            tools:layout_editor_absoluteX="25dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

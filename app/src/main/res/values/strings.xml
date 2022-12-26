@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Wada Chirebandi Client</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="details">Details</string>
+    <string name="customer_name">Customer name</string>
+    <string name="customer_number">Customer Number</string>
+    <string name="number_of_guest">Number of guest</string>
+    <string name="payment_amount">Payment Amount</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="check_in_date">Check-In Date</string>
+    <string name="check_out_date">Check-Out Date</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="customer_phone_number">Customer phone number</string>
+    <string name="customer_email">Customer email(optional)</string>
+    <string name="check_in">Check-In</string>
+    <string name="check_out">Check-Out</string>
+    <string name="amount">Amount</string>
+    <string name="villa_image">Villa Image</string>
+    <string name="retry">Retry</string>
+    <string name="failed_to_connect">Failed to connect</string>
+    <string name="villa">Villa</string>
+    <string name="add_entry">Add Entry</string>
+    <string name="go_back">Go back</string>
+    <string name="document_images_are_empty_please_add_it_before_creating_a_entry">Document images are empty, Please add it before creating a entry</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="dinner">Dinner</string>
+    <string name="entry_added_successfully">Entry Added Successfully</string>
+    <string name="delete_entry">Delete Entry</string>
+    <string name="no_entries_available">No entries available</string>
+</resources>
