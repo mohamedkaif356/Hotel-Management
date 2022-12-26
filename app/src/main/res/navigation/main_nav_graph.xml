@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/villaFragment">
+
+    <fragment
+        android:id="@+id/villaFragment"
+        android:name="com.wadachirebandi.admin.ui.fragments.VillaFragment"
+        android:label="fragment_villa"
+        tools:layout="@layout/fragment_villa" >
+        <action
+            android:id="@+id/action_villaFragment_to_entryFragment"
+            app:destination="@id/entryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/entryFragment"
+        android:name="com.wadachirebandi.admin.ui.fragments.EntryFragment"
+        android:label="fragment_entry"
+        tools:layout="@layout/fragment_entry">
+
+        <argument
+            android:name="villa_id"
+            app:argType="string"
+            android:defaultValue="101" />
+        <argument
+            android:name="villa_name"
+            app:argType="string"
+            android:defaultValue="101" />
+        <action
+            android:id="@+id/action_entryFragment_to_entryDetailsFragment"
+            app:destination="@id/entryDetailsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/entryDetailsFragment"
+        android:name="com.wadachirebandi.admin.ui.fragments.EntryDetailsFragment"
+        android:label="fragment_entry_details"
+        tools:layout="@layout/fragment_entry_details">
+
+        <argument
+            android:name="entryId"
+            app:argType="string"
+            android:defaultValue="101" />
+
+    </fragment>
+</navigation>
